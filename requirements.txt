@@ -1,2 +1,6 @@
-#bibliotekos
-matau tavo bibliotekas
+#naudotos bibliotekos
+
+# from bs4 import BeautifulSoup
+# import requests
+# import pandas as pd
+# import psycopg2
