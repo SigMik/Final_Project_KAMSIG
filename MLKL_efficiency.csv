@@ -1,53 +1,53 @@
-,Place,Player,EFF,Team,GM,EFF_min,EFF_max
-0,1.,Gintarė  Petronytė,698,Vilniaus Kibirkštis,20,19,54
-1,2.,Tyra Marie Buss,345,Kauno Aistės-LSMU,19,-7,36
-2,3.,Linda Victorine  Ndoli,313,Klaipėdos Neptūnas,20,1,30
-3,4.,Gabrielė  Šulskė,264,Vilniaus Kibirkštis,20,-1,26
-4,5.,Maisa Pereira Dias,258,Klaipėdos LCC tarptautinis universitetas,20,-2,33
-5,6.,Gerda  Raulušaitytė,251,Vilniaus Kibirkštis,21,4,21
-6,7.,Laurita  Jurčiūtė,246,Klaipėdos LCC tarptautinis universitetas,19,-2,27
-7,8.,Maiara  Pereira Dias,237,Klaipėdos LCC tarptautinis universitetas,20,-4,25
-8,9.,Uliana  Datsko,230,Klaipėdos Neptūnas,20,2,23
-9,10.,Martyna   Petrėnaitė,223,Kauno Aistės-LSMU,19,-4,26
-10,11.,Agnė  Černeckytė,202,Klaipėdos Neptūnas,20,-3,25
-11,12.,Ligita  Tamutytė,201,Klaipėdos Neptūnas,20,-3,22
-12,13.,Gintarė  Paulauskaitė,194,Kauno Aistės-LSMU,18,-2,23
-13,14.,Justina  Miknaitė,191,Vilniaus Kibirkštis,21,-4,23
-14,15.,Dalia  Donskichytė,187,Klaipėdos Neptūnas,20,-5,21
-15,16.,Lina  Loceniece,183,Klaipėdos LCC tarptautinis universitetas,17,0,22
-16,17.,Karolina  Kazočiūnaitė,183,Vilniaus Kibirkštis,20,0,26
-17,18.,Gintarė  Mažionytė,183,Vilniaus Kibirkštis,21,-4,25
-18,19.,Eglė  Zabotkaitė,182,Vilniaus Kibirkštis,20,0,22
-19,20.,Viktoria  Balaban,179,Klaipėdos Neptūnas,19,-6,21
-20,21.,Urtė  Čižauskaitė,166,Kauno Aistės-LSMU,18,-2,22
-21,22.,Morgan  Lenahan,159,Šiaulių Šiauliai-Vilmers,12,0,25
-22,23.,Rūta  Stipra,153,Šiaulių Šiauliai-Vilmers,11,-1,29
-23,24.,Brigita  Sinickaitė,147,Klaipėdos Neptūnas,18,-1,19
-24,25.,Gedvilė  Savostaitė,142,Kauno Aistės-LSMU,19,-1,18
-25,26.,Rachel Elise Theriot,128,Vilniaus Kibirkštis,14,-4,26
-26,27.,Saulė  Mikelionytė,124,Klaipėdos Neptūnas,20,-4,20
-27,28.,Audronė  Zdanevičiūtė,123,Kauno Aistės-LSMU,18,-5,34
-28,29.,Deimantė  Žukaitė,107,Kauno Aistės-LSMU,18,-3,16
-29,30.,Livija  Sakevičiūtė,101,Vilniaus Kibirkštis,19,-2,19
-30,31.,Ugnė  Sirtautaitė,94,Vilniaus Kibirkštis,20,-3,18
-31,32.,Elizabete  Bulane,92,Klaipėdos LCC tarptautinis universitetas,16,-4,27
-32,33.,Enrika  Matiukaitė,87,Šiaulių Šiauliai-Vilmers,12,-2,20
-33,34.,Brigita  Rimkevičiūtė,84,Šiaulių Šiauliai-Vilmers,12,-3,21
-34,35.,Laura  Juškaitė,82,Vilniaus Kibirkštis,5,9,21
-35,36.,Danguolė  Pupkevičiūtė,77,Šiaulių Šiauliai-Vilmers,12,-6,25
-36,37.,Kateryna  Chikaodiri Dike,62,Klaipėdos LCC tarptautinis universitetas,17,-5,26
-37,38.,Salome  Cordinier,59,Klaipėdos LCC tarptautinis universitetas,20,-7,15
-38,39.,Amalija  Pašajevaitė,29,Kauno Aistės-LSMU,12,-3,8
-39,40.,Gustė  Drakšaitė,21,Klaipėdos LCC tarptautinis universitetas,14,-2,7
-40,41.,Olha  Holodiuk,18,Šiaulių Šiauliai-Vilmers,10,-2,15
-41,42.,Yuliia  Hutevych,16,Šiaulių Šiauliai-Vilmers,5,-6,13
-42,43.,Kamilė  Mickutė,16,Klaipėdos Neptūnas,7,-4,10
-43,44.,Justina   Kraujūnaitė,15,Vilniaus Kibirkštis,6,-2,16
-44,45.,Neda  Pliatkutė,11,Kauno Aistės-LSMU,18,-10,13
-45,46.,Agnesė  Garčinskaitė,10,Kauno Aistės-LSMU,8,-3,5
-46,47.,Kamilė  Berenytė,8,Šiaulių Šiauliai-Vilmers,11,-4,10
-47,48.,Polina  Korbut,5,Klaipėdos LCC tarptautinis universitetas,20,-8,6
-48,49.,Evelina  Razgutė,4,Kauno Aistės-LSMU,7,-2,3
-49,50.,Saulė  Globytė,3,Klaipėdos Neptūnas,5,-1,3
-50,51.,Iryna  Savchuk,1,Šiaulių Šiauliai-Vilmers,9,-3,5
-51,52.,Karina  Budajeva,1,Klaipėdos LCC tarptautinis universitetas,10,-4,3
+,Place,Player,Team,Games,Sum
+0,1.,Gintarė  Petronytė,Vilniaus Kibirkštis,20,698
+1,2.,Tyra Marie Buss,Kauno Aistės-LSMU,19,345
+2,3.,Linda Victorine  Ndoli,Klaipėdos Neptūnas,20,313
+3,4.,Gabrielė  Šulskė,Vilniaus Kibirkštis,20,264
+4,5.,Maisa Pereira Dias,Klaipėdos LCC tarptautinis universitetas,20,258
+5,6.,Gerda  Raulušaitytė,Vilniaus Kibirkštis,21,251
+6,7.,Laurita  Jurčiūtė,Klaipėdos LCC tarptautinis universitetas,19,246
+7,8.,Maiara  Pereira Dias,Klaipėdos LCC tarptautinis universitetas,20,237
+8,9.,Uliana  Datsko,Klaipėdos Neptūnas,20,230
+9,10.,Martyna   Petrėnaitė,Kauno Aistės-LSMU,19,223
+10,11.,Agnė  Černeckytė,Klaipėdos Neptūnas,20,202
+11,12.,Ligita  Tamutytė,Klaipėdos Neptūnas,20,201
+12,13.,Gintarė  Paulauskaitė,Kauno Aistės-LSMU,18,194
+13,14.,Justina  Miknaitė,Vilniaus Kibirkštis,21,191
+14,15.,Dalia  Donskichytė,Klaipėdos Neptūnas,20,187
+15,16.,Lina  Loceniece,Klaipėdos LCC tarptautinis universitetas,17,183
+16,17.,Karolina  Kazočiūnaitė,Vilniaus Kibirkštis,20,183
+17,18.,Gintarė  Mažionytė,Vilniaus Kibirkštis,21,183
+18,19.,Eglė  Zabotkaitė,Vilniaus Kibirkštis,20,182
+19,20.,Viktoria  Balaban,Klaipėdos Neptūnas,19,179
+20,21.,Urtė  Čižauskaitė,Kauno Aistės-LSMU,18,166
+21,22.,Morgan  Lenahan,Šiaulių Šiauliai-Vilmers,12,159
+22,23.,Rūta  Stipra,Šiaulių Šiauliai-Vilmers,11,153
+23,24.,Brigita  Sinickaitė,Klaipėdos Neptūnas,18,147
+24,25.,Gedvilė  Savostaitė,Kauno Aistės-LSMU,19,142
+25,26.,Rachel Elise Theriot,Vilniaus Kibirkštis,14,128
+26,27.,Saulė  Mikelionytė,Klaipėdos Neptūnas,20,124
+27,28.,Audronė  Zdanevičiūtė,Kauno Aistės-LSMU,18,123
+28,29.,Deimantė  Žukaitė,Kauno Aistės-LSMU,18,107
+29,30.,Livija  Sakevičiūtė,Vilniaus Kibirkštis,19,101
+30,31.,Ugnė  Sirtautaitė,Vilniaus Kibirkštis,20,94
+31,32.,Elizabete  Bulane,Klaipėdos LCC tarptautinis universitetas,16,92
+32,33.,Enrika  Matiukaitė,Šiaulių Šiauliai-Vilmers,12,87
+33,34.,Brigita  Rimkevičiūtė,Šiaulių Šiauliai-Vilmers,12,84
+34,35.,Laura  Juškaitė,Vilniaus Kibirkštis,5,82
+35,36.,Danguolė  Pupkevičiūtė,Šiaulių Šiauliai-Vilmers,12,77
+36,37.,Kateryna  Chikaodiri Dike,Klaipėdos LCC tarptautinis universitetas,17,62
+37,38.,Salome  Cordinier,Klaipėdos LCC tarptautinis universitetas,20,59
+38,39.,Amalija  Pašajevaitė,Kauno Aistės-LSMU,12,29
+39,40.,Gustė  Drakšaitė,Klaipėdos LCC tarptautinis universitetas,14,21
+40,41.,Olha  Holodiuk,Šiaulių Šiauliai-Vilmers,10,18
+41,42.,Yuliia  Hutevych,Šiaulių Šiauliai-Vilmers,5,16
+42,43.,Kamilė  Mickutė,Klaipėdos Neptūnas,7,16
+43,44.,Justina   Kraujūnaitė,Vilniaus Kibirkštis,6,15
+44,45.,Neda  Pliatkutė,Kauno Aistės-LSMU,18,11
+45,46.,Agnesė  Garčinskaitė,Kauno Aistės-LSMU,8,10
+46,47.,Kamilė  Berenytė,Šiaulių Šiauliai-Vilmers,11,8
+47,48.,Polina  Korbut,Klaipėdos LCC tarptautinis universitetas,20,5
+48,49.,Evelina  Razgutė,Kauno Aistės-LSMU,7,4
+49,50.,Saulė  Globytė,Klaipėdos Neptūnas,5,3
+50,51.,Iryna  Savchuk,Šiaulių Šiauliai-Vilmers,9,1
+51,52.,Karina  Budajeva,Klaipėdos LCC tarptautinis universitetas,10,1

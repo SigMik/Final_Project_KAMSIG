@@ -17,46 +17,44 @@ import pandas as pd
 #         for row in rows[1:]:
 #             columns = row.find_all('td')
 #             try:
-#                 vieta = columns[0].text.strip()
+#                 place = columns[0].text.strip()
 #             except IndexError:
-#                 vieta = ""
+#                 place = ""
 #
 #             try:
-#                 zaidejas = columns[1].text.strip()
+#                 player = columns[1].text.strip()
 #             except IndexError:
-#                 zaidejas = ""
+#                 player = ""
 #
 #             try:
-#                 komanda = columns[2].text.strip()
+#                 team = columns[2].text.strip()
 #             except IndexError:
-#                 komanda = ""
+#                 team = ""
 #
 #             try:
-#                 rungtynes = columns[3].text.strip()
+#                 games = columns[3].text.strip()
 #             except IndexError:
-#                 rungtynes = ""
+#                 games = ""
 #
 #             try:
-#                 suma = columns[4].text.strip()
+#                 sum = columns[4].text.strip()
 #             except IndexError:
-#                 suma = ""
+#                 sum = ""
 #
 #             data.append({
-#                 'Vieta': vieta,
-#                 'Zaidejas': zaidejas,
-#                 'Komanda': komanda,
-#                 'Rungtynes': rungtynes,
-#                 'Suma': suma,
+#                 'Place': place,
+#                 'Player': player,
+#                 'Team': team,
+#                 'Games': games,
+#                 'Sum': sum,
 #             })
-#
-#     # Print the scraped data
-#     # for entry in data:
-#         # print(entry)
 #
 #     df=pd.DataFrame(data)
 #     print(df)
 #
 # df.to_csv('LKL_points.csv')
+
+#*******
 
 # data1=[]
 # for p in range(1, 12): #issirenkam pagal rebounds ir 2022-2023 sezona
@@ -73,36 +71,36 @@ import pandas as pd
 #         for row in rows[1:]:
 #             columns = row.find_all('td')
 #             try:
-#                 vieta = columns[0].text.strip()
+#                 place = columns[0].text.strip()
 #             except IndexError:
-#                 vieta = ""
+#                 place = ""
 #
 #             try:
-#                 zaidejas = columns[1].text.strip()
+#                 player = columns[1].text.strip()
 #             except IndexError:
-#                 zaidejas = ""
+#                 player = ""
 #
 #             try:
-#                 komanda = columns[2].text.strip()
+#                 team = columns[2].text.strip()
 #             except IndexError:
-#                 komanda = ""
+#                 team = ""
 #
 #             try:
-#                 rungtynes = columns[3].text.strip()
+#                 games = columns[3].text.strip()
 #             except IndexError:
-#                 rungtynes = ""
+#                 games = ""
 #
 #             try:
-#                 suma = columns[4].text.strip()
+#                 sum = columns[4].text.strip()
 #             except IndexError:
-#                 suma = ""
+#                 sum = ""
 #
 #             data1.append({
-#                 'Vieta': vieta,
-#                 'Zaidejas': zaidejas,
-#                 'Komanda': komanda,
-#                 'Rungtynes': rungtynes,
-#                 'Suma': suma,
+#                 'Place': place,
+#                 'Player': player,
+#                 'Team': team,
+#                 'Games': games,
+#                 'Sum': sum,
 #             })
 #
 #     df=pd.DataFrame(data1)
@@ -110,6 +108,8 @@ import pandas as pd
 #
 # df.to_csv('LKL_rebounds.csv')
 
+#*******
+#
 # data2=[]
 # for p in range(1, 12): #issirenkam pagal assists ir 2022-2023 sezona
 #     url = f'https://lkl.lt/get-players-stats?category=assists&tab=sums&season_id=32000&additional_filters=0&team_id=-&month=&search_text=&page={p}'
@@ -125,42 +125,44 @@ import pandas as pd
 #         for row in rows[1:]:
 #             columns = row.find_all('td')
 #             try:
-#                 vieta = columns[0].text.strip()
+#                 place = columns[0].text.strip()
 #             except IndexError:
-#                 vieta = ""
+#                 place = ""
 #
 #             try:
-#                 zaidejas = columns[1].text.strip()
+#                 player = columns[1].text.strip()
 #             except IndexError:
-#                 zaidejas = ""
+#                 player = ""
 #
 #             try:
-#                 komanda = columns[2].text.strip()
+#                 team = columns[2].text.strip()
 #             except IndexError:
-#                 komanda = ""
+#                 team = ""
 #
 #             try:
-#                 rungtynes = columns[3].text.strip()
+#                 games = columns[3].text.strip()
 #             except IndexError:
-#                 rungtynes = ""
+#                 games = ""
 #
 #             try:
-#                 suma = columns[4].text.strip()
+#                 sum = columns[4].text.strip()
 #             except IndexError:
-#                 suma = ""
+#                 sum = ""
 #
 #             data2.append({
-#                 'Vieta': vieta,
-#                 'Zaidejas': zaidejas,
-#                 'Komanda': komanda,
-#                 'Rungtynes': rungtynes,
-#                 'Suma': suma,
+#                 'Place': place,
+#                 'Player': player,
+#                 'Team': team,
+#                 'Games': games,
+#                 'Sum': sum,
 #             })
 #
 #     df=pd.DataFrame(data2)
 #     print(df)
 #
 # df.to_csv('LKL_assists.csv')
+
+#*******
 
 # data3=[]
 # for p in range(1, 12): #issirenkam pagal efficiency ir 2022-2023 sezona
@@ -177,36 +179,36 @@ import pandas as pd
 #         for row in rows[1:]:
 #             columns = row.find_all('td')
 #             try:
-#                 vieta = columns[0].text.strip()
+#                 place = columns[0].text.strip()
 #             except IndexError:
-#                 vieta = ""
+#                 place = ""
 #
 #             try:
-#                 zaidejas = columns[1].text.strip()
+#                 player = columns[1].text.strip()
 #             except IndexError:
-#                 zaidejas = ""
+#                 player = ""
 #
 #             try:
-#                 komanda = columns[2].text.strip()
+#                 team = columns[2].text.strip()
 #             except IndexError:
-#                 komanda = ""
+#                 team = ""
 #
 #             try:
-#                 rungtynes = columns[3].text.strip()
+#                 games = columns[3].text.strip()
 #             except IndexError:
-#                 rungtynes = ""
+#                 games = ""
 #
 #             try:
-#                 suma = columns[4].text.strip()
+#                 sum = columns[4].text.strip()
 #             except IndexError:
-#                 suma = ""
+#                 sum = ""
 #
 #             data3.append({
-#                 'Vieta': vieta,
-#                 'Zaidejas': zaidejas,
-#                 'Komanda': komanda,
-#                 'Rungtynes': rungtynes,
-#                 'Suma': suma,
+#                 'Place': place,
+#                 'Player': player,
+#                 'Team': team,
+#                 'Games': games,
+#                 'Sum': sum,
 #             })
 #
 #     df=pd.DataFrame(data3)
