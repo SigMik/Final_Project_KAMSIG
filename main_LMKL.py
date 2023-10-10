@@ -199,68 +199,68 @@ import pandas as pd
 #
 # df.to_csv('MLKL_assists.csv')
 
-wdata3=[]
-#issirenkam pagal naudinguma rezultatyvius perdavimus ir 2022-2023 sezona
-
-url = 'https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html?fgroup=players&fseason=2022&fmonth=0&stage=0&fpos=eff&sort=total&games_type=all'
-response = requests.get(url)
-# print(response.status_code)
-
-soup = BeautifulSoup(response.text, 'html.parser')
-# print(soup.prettify())
-
-table=soup.find('table',class_='list02')
-if table:
-    rows = table.find_all('tr')
-    for row in rows[1:]:
-        columns = row.find_all('td')
-        try:
-            place = columns[0].text.strip()
-        except IndexError:
-            place = ""
-
-        try:
-            player = columns[1].text.strip()
-        except IndexError:
-            player = ""
-
-        try:
-            EFF = columns[2].text.strip()
-        except IndexError:
-            EFF = ""
-
-        try:
-            team = columns[3].text.strip()
-        except IndexError:
-            team = ""
-
-        try:
-            GM = columns[4].text.strip()
-        except IndexError:
-            GM = ""
-
-        try:
-            EFF_min = columns[5].text.strip()
-        except IndexError:
-            EFF_min = ""
-
-        try:
-            EFF_max = columns[6].text.strip()
-        except IndexError:
-            EFF_max = ""
-
-        wdata3.append({
-            'Place': place,
-            'Player': player,
-            'EFF': EFF,
-            'Team': team,
-            'GM': GM,
-            'EFF_min': EFF_min,
-            'EFF_max': EFF_max
-        })
-
-
-df=pd.DataFrame(wdata3)
-print(df)
-
-df.to_csv('MLKL_efficiency.csv')
+# wdata3=[]
+# #issirenkam pagal naudinguma rezultatyvius perdavimus ir 2022-2023 sezona
+#
+# url = 'https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html?fgroup=players&fseason=2022&fmonth=0&stage=0&fpos=eff&sort=total&games_type=all'
+# response = requests.get(url)
+# # print(response.status_code)
+#
+# soup = BeautifulSoup(response.text, 'html.parser')
+# # print(soup.prettify())
+#
+# table=soup.find('table',class_='list02')
+# if table:
+#     rows = table.find_all('tr')
+#     for row in rows[1:]:
+#         columns = row.find_all('td')
+#         try:
+#             place = columns[0].text.strip()
+#         except IndexError:
+#             place = ""
+#
+#         try:
+#             player = columns[1].text.strip()
+#         except IndexError:
+#             player = ""
+#
+#         try:
+#             EFF = columns[2].text.strip()
+#         except IndexError:
+#             EFF = ""
+#
+#         try:
+#             team = columns[3].text.strip()
+#         except IndexError:
+#             team = ""
+#
+#         try:
+#             GM = columns[4].text.strip()
+#         except IndexError:
+#             GM = ""
+#
+#         try:
+#             EFF_min = columns[5].text.strip()
+#         except IndexError:
+#             EFF_min = ""
+#
+#         try:
+#             EFF_max = columns[6].text.strip()
+#         except IndexError:
+#             EFF_max = ""
+#
+#         wdata3.append({
+#             'Place': place,
+#             'Player': player,
+#             'EFF': EFF,
+#             'Team': team,
+#             'GM': GM,
+#             'EFF_min': EFF_min,
+#             'EFF_max': EFF_max
+#         })
+#
+#
+# df=pd.DataFrame(wdata3)
+# print(df)
+#
+# df.to_csv('MLKL_efficiency.csv')
