@@ -20,3 +20,4 @@ Projekto užduotys (pildysis projekto eigoje):
         ⁘ žaidėjas pagal didžiausią naudingumo balą
     ⁙ vizualizuoti duomenis pagal atliktą analizę
     ⁙ naudojant biblioteką leidžiančia prognozuoti rezultatus, pabandyti numatyti šio sezono LKL laimėtojus  
+
