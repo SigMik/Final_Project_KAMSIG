@@ -54,7 +54,7 @@ import pandas as pd
 #
 # df.to_csv('LKL_points.csv')
 
-#*******
+#******
 
 # data1=[]
 # for p in range(1, 12): #issirenkam pagal rebounds ir 2022-2023 sezona
@@ -108,7 +108,7 @@ import pandas as pd
 #
 # df.to_csv('LKL_rebounds.csv')
 
-#*******
+#******
 #
 # data2=[]
 # for p in range(1, 12): #issirenkam pagal assists ir 2022-2023 sezona
@@ -162,7 +162,7 @@ import pandas as pd
 #
 # df.to_csv('LKL_assists.csv')
 
-#*******
+#******
 
 # data3=[]
 # for p in range(1, 12): #issirenkam pagal efficiency ir 2022-2023 sezona
@@ -218,50 +218,49 @@ import pandas as pd
 
 #******
 
-data4=[]
-for p in range(1, 7): #issirenkam pagal tritaskiu metimo taikluma ir 2022-2023 sezona
-    # url = f'https://lkl.lt/get-players-stats?category=3pts_percentage&tab=avg&season_id=32000&additional_filters=0&team_id=-&month=&search_text={p}'
-    url = f'https://lkl.lt/get-players-stats?category=3pts_percentage&tab=avg&season_id=32000&additional_filters=0&team_id=-&month=&search_text={p}'
-    response = requests.get(url)
-    # print(response.status_code)
+# data4=[]
+# for p in range(1, 7): #issirenkam pagal tritaskiu metimo taikluma ir 2022-2023 sezona
+#     url = f'https://lkl.lt/get-players-stats?category=3pts_percentage&tab=avg&season_id=32000&additional_filters=0&team_id=-&month=&search_text=&page={p}'
+#     response = requests.get(url)
+#     # print(response.status_code)
 #
-    soup = BeautifulSoup(response.text, 'html.parser')
+#     soup = BeautifulSoup(response.text, 'html.parser')
 #     # print(soup.prettify())
 #
-    table=soup.find("table")
-    if table:
-        rows = table.find_all('tr')
-        for row in rows[1:]:
-            columns = row.find_all('td')
-            try:
-                place = columns[0].text.strip()
-            except IndexError:
-                place = ""
-
-            try:
-                player = columns[1].text.strip()
-            except IndexError:
-                player = ""
-
-            try:
-                team = columns[2].text.strip()
-            except IndexError:
-                team = ""
-
-            try:
-                three_pts_percentage = columns[6].text.strip()
-            except IndexError:
-                three_pts_percentage = ""
-
-
-            data4.append({
-                'Place': place,
-                'Player': player,
-                'Team': team,
-                'Three_pts_percentage': three_pts_percentage
-            })
-
-    df=pd.DataFrame(data4)
-    print(df)
-
-# df.to_csv('LKL_3_points_made.csv')
+#     table=soup.find("table")
+#     if table:
+#         rows = table.find_all('tr')
+#         for row in rows[1:]:
+#             columns = row.find_all('td')
+#             try:
+#                 place = columns[0].text.strip()
+#             except IndexError:
+#                 place = ""
+#
+#             try:
+#                 player = columns[1].text.strip()
+#             except IndexError:
+#                 player = ""
+#
+#             try:
+#                 team = columns[2].text.strip()
+#             except IndexError:
+#                 team = ""
+#
+#             try:
+#                 three_pts_percentage = columns[6].text.strip()
+#             except IndexError:
+#                 three_pts_percentage = ""
+#
+#
+#             data4.append({
+#                 'Place': place,
+#                 'Player': player,
+#                 'Team': team,
+#                 'Three_pts_percentage': three_pts_percentage
+#             })
+#
+# df=pd.DataFrame(data4)
+# print(df)
+#
+# df.to_csv('LKL_3_points_percentage.csv')

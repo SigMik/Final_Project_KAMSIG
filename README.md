@@ -1,11 +1,11 @@
-# Final_Project_KAMSIG
-Projekto kūrėjos: Kamila Kononovič and Sigita Mikolainienė
+Final_Project_KAMSIG
 
-Projekto tema: Lietuvos krepšinio statistikos analizė
+Project created by: Kamila Kononovič and Sigita Mikolainienė
+Project theme: Basketball statistic analysis in LKL and MLKL
 
-Mokymo įstaiga: Vilnius Coding school
+School: Vilnius Coding school
+Teacher: Modestas Viršila
 
-Lektorius: Modestas Viršila
 
 Projekto tikslas: surinkti, apdoroti, analizuoti ir vizualizuoti krepšinio LKL ir MLKL statistiką naudojant Python ir
 susijusias bibliotekas.
@@ -14,10 +14,12 @@ Projekto užduotys (pildysis projekto eigoje):
     ⁙ surinkti duomenis iš pasirinktų dviejų url
     ⁙ sudėti juos į lentelė ir apdoroti reikšmes, kurias naudosime analizei
     ⁙ atlikti analizę praėjusių trijų sezonų (2020-2021, 2021-2022, 2022 - 2023):
-        ⁘ daugiausiai taškų pelnęs žaidėjas
-        ⁘ daugiausiai rezultatyvių perdavimų atlikęs žaidėjas
-        ⁘ daugiausiai atkovojęs kamuolių žaidėjas        
-        ⁘ žaidėjas pagal didžiausią naudingumo balą
+        ⁘ daugiausiai taškų pelnęs žaidėjas LKL ir MLKL su image
+        ⁘ žaidėjas pagal didžiausią efektyvumo balą LKL ir MLKL su image
+        ⁘ komandų pasiskirstymas pagal efektyvumo balą LKL ir MLKL     
+        ⁘ taškų santykis su klaidomis LKL 5 žaidėjų ir MLKL 5 žaidėjų
+        ⁘ tritaškių pataikymo procentas LKL ir MLKL 
+
     ⁙ vizualizuoti duomenis pagal atliktą analizę
     ⁙ naudojant biblioteką leidžiančia prognozuoti rezultatus, pabandyti numatyti šio sezono LKL laimėtojus  
 

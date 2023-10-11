@@ -49,13 +49,12 @@ import pandas as pd
 #             'Sum': sum
 #         })
 #
-#
 # df=pd.DataFrame(mdata)
 # print(df)
 #
 # df.to_csv('MLKL_points.csv')
 
-#*****
+#******
 
 # mdata1=[]
 # #issirenkam pagal atkovotus kamuolius ir 2022-2023 sezona
@@ -110,7 +109,7 @@ import pandas as pd
 #
 # df.to_csv('MLKL_rebounds.csv')
 
-#*******
+#******
 
 # mdata2=[]
 # #issirenkam pagal rezultatyvius perdavimus ir 2022-2023 sezona
@@ -166,8 +165,8 @@ import pandas as pd
 #
 # df.to_csv('MLKL_assists.csv')
 
-#********
-#
+#******
+
 # mdata3=[]
 # #issirenkam pagal naudinguma rezultatyvius perdavimus ir 2022-2023 sezona
 #
@@ -221,3 +220,53 @@ import pandas as pd
 # print(df)
 #
 # df.to_csv('MLKL_efficiency.csv')
+
+# ******
+
+# mdata4=[]
+# #issirenkam pagal tritaskiu metimo taikluma ir 2022-2023 sezona
+#
+# url = 'https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html?fgroup=players&fseason=2022&fmonth=0&stage=0&fpos=3pts&sort=average&games_type=all'
+# response = requests.get(url)
+# # print(response.status_code)
+#
+# soup = BeautifulSoup(response.text, 'html.parser')
+# # print(soup.prettify())
+#
+# table=soup.find('table',class_='list02')
+#
+# if table:
+#     rows = table.find_all('tr')
+#     for row in rows[1:]:
+#         columns = row.find_all('td')
+#         try:
+#             place = columns[0].text.strip()
+#         except IndexError:
+#             place = ""
+#
+#         try:
+#             player = columns[1].text.strip()
+#         except IndexError:
+#             player = ""
+#
+#         try:
+#             team = columns[3].text.strip()
+#         except IndexError:
+#             team = ""
+#
+#         try:
+#             three_pts_percentage = columns[2].text.strip()
+#         except IndexError:
+#             three_pts_percentage = ""
+#
+#         mdata4.append({
+#             'Place': place,
+#             'Player': player,
+#             'Team': team,
+#             'Three_pts_percentage': three_pts_percentage
+#         })
+#
+# df=pd.DataFrame(mdata4)
+# print(df)
+#
+# df.to_csv('MLKL_3_points_percentage.csv')
