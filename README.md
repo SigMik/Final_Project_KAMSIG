@@ -13,7 +13,7 @@ susijusias bibliotekas.
 Projekto užduotys (pildysis projekto eigoje):
     ⁙ surinkti duomenis iš pasirinktų dviejų url
     ⁙ sudėti juos į lentelė ir apdoroti reikšmes, kurias naudosime analizei
-    ⁙ atlikti analizę praėjusių trijų sezonų (2020-2021, 2021-2022, 2022 - 2023):
+    ⁙ atlikti LKL ir MLKL  praėjusio sezono (2022 - 2023) statistinę analizę
         ⁘ daugiausiai taškų pelnęs žaidėjas LKL ir MLKL su image
         ⁘ žaidėjas pagal didžiausią efektyvumo balą LKL ir MLKL su image
         ⁘ komandų pasiskirstymas pagal efektyvumo balą LKL ir MLKL     
