@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 # ******
 
@@ -57,14 +58,54 @@ import matplotlib.pyplot as plt
 
 # komandų pasiskirstymas pagal efektyvumo balą LKL ir MLKL
 
-df = pd.read_csv('LKL_efficiency.csv')
-# wdf = pd.read_csv('MLKL_efficiency.csv')
+# df = pd.read_csv('LKL_efficiency.csv')
+# # wdf = pd.read_csv('MLKL_efficiency.csv')
+#
+# df.Teamresultefficiency=df.groupby(["Team"]).sum()
+# print(df.Teamresultefficiency)
 
-df.Teamresultefficiency=df.groupby(["Team"]).sum()
-print(df.Teamresultefficiency)
+# ******
 
+# BANDYMAS, ISTRINTI
 
+# didziausią taškų vidurkį per sezono rungtynes pelnęs žaidėjas LKL ir MLKL
 
+df = pd.read_csv('LKL_points.csv')
+wdf = pd.read_csv('MLKL_points.csv')
+
+df['Result']=df['Sum']/df['Games']
+sortdf=df.sort_values(by='Result', ascending=False).round(2)
+print(sortdf)
+
+wdf['Result']=wdf['Sum']/df['Games']
+sortwdf=wdf.sort_values(by='Result', ascending=False).round(2)
+# print(sortwdf)
+
+# Sukuriame su image diagramą
+img=[plt.imread('C:\FotoLKL\ImageLKL.png'), plt.imread('C:\FotoLKL\ImageMLKL.png')]
+plt.bar([0,1], [1,2])
+plt.xticks([0,1], ['',''])
+
+ax=plt.gca()
+tick_labels = ax.xaxis.get_ticklabels()
+for i,im in enumerate(img):
+    ib = OffsetImage(im, zoom=.4)
+    ib.image.axes = ax
+    ab = AnnotationBbox(ib,
+        tick_labels[i].get_position(),
+        frameon=False,
+        box_alignment=(1,1)
+    )
+    ax.add_artist(ab)
+# print(ax)
+
+# plt.figure(figsize=(6, 6))
+# sns.barplot(data=sortdf[:1], x="Player", y="Result", hue='Result', color='black', width=0.2)
+# sns.barplot(data=sortwdf[:1], x="Player", y="Result", hue='Result', color='black', width=0.2)
+# plt.title("Best results of PTS average")
+# plt.xlabel("LKL and MLKL player ")
+# plt.ylabel("Result by PTS average 2022-2023 season")
+# plt.show()
 
 
 
