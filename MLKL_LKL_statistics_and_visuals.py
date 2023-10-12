@@ -64,18 +64,18 @@ sortdf=df.sort_values(by='Resultefficiency', ascending=False).round(2)
 # # df.Teamresultefficiency=df.groupby(["Team"]).sum()
 # # print(df.Teamresultefficiency)
 # #
-# df['Result']=df['Sum']/df['Games']
-# sortdf=df.sort_values(by='Result', ascending=False).round(2)
-# groupsortdf = sortdf.groupby(["Team"]).sum()
-#
-# groupsortdf_barplot = groupsortdf.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
+df['Result']=df['Sum']/df['Games']
+sortdf=df.sort_values(by='Result', ascending=False).round(2)
+groupsortdf = sortdf.groupby(["Team"]).sum()
+
+groupsortdf_barplot = groupsortdf.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
 # print(groupsortdf_barplot)
-#
-# sns.barplot(data = groupsortdf_barplot, x= 'Team', y = 'Result')
-# plt.title('LKL teams by efficiency in 2022-2023 season')
-# plt.xlabel('Teams')
-# plt.ylabel('Result')
-# plt.show()
+
+sns.barplot(data = groupsortdf_barplot, x= 'Team', y = 'Result')
+plt.title('LKL teams by efficiency in 2022-2023 season')
+plt.xlabel('Teams')
+plt.ylabel('Result')
+plt.show()
 
 # ******
 
