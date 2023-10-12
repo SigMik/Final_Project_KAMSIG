@@ -60,10 +60,10 @@ sortdf=df.sort_values(by='Resultefficiency', ascending=False).round(2)
 ## wdf = pd.read_csv('MLKL_efficiency.csv')
 
 
-df = pd.read_csv('csv_files/LKL_efficiency.csv')
-# df.Teamresultefficiency=df.groupby(["Team"]).sum()
-# print(df.Teamresultefficiency)
-#
+# df = pd.read_csv('csv_files/LKL_efficiency.csv')
+# # df.Teamresultefficiency=df.groupby(["Team"]).sum()
+# # print(df.Teamresultefficiency)
+# #
 # df['Result']=df['Sum']/df['Games']
 # sortdf=df.sort_values(by='Result', ascending=False).round(2)
 # groupsortdf = sortdf.groupby(["Team"]).sum()
@@ -76,10 +76,6 @@ df = pd.read_csv('csv_files/LKL_efficiency.csv')
 # plt.xlabel('Teams')
 # plt.ylabel('Result')
 # plt.show()
-
-
-
-
 
 # ******
 
