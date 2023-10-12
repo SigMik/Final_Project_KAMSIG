@@ -14,8 +14,8 @@ Projekto užduotys (pildysis projekto eigoje):
     ⁙ surinkti duomenis iš pasirinktų dviejų url
     ⁙ sudėti juos į lentelė ir apdoroti reikšmes, kurias naudosime analizei
     ⁙ atlikti LKL ir MLKL  praėjusio sezono (2022 - 2023) statistinę analizę
-        ⁘ daugiausiai taškų pelnęs žaidėjas LKL ir MLKL su image
-        ⁘ žaidėjas pagal didžiausią efektyvumo balą LKL ir MLKL su image
+        ⁘ daugiausiai taškų pelnęs žaidėjas LKL ir MLKL
+        ⁘ penki žaidėjai pagal didžiausius efektyvumo balus LKL ir MLKL 
         ⁘ komandų pasiskirstymas pagal efektyvumo balą LKL ir MLKL     
         ⁘ taškų santykis su klaidomis LKL 5 žaidėjų ir MLKL 5 žaidėjų
         ⁘ tritaškių pataikymo procentas LKL ir MLKL 
