@@ -136,20 +136,22 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 # pasirinktos komandos pokytis per tris sezonus NEPAVYKSTA, BANDYTI TOLIAU
 
-# df = pd.read_csv('csv_files/S3_LKL_points.csv')
-#
-# df['Result']=df['Sum']/df['Games']
-# sortdf=df.sort_values(by='Result', ascending=False).round(2)
-# groupsortdf = sortdf.groupby(["Team"]).sum()
-#
-# groupsortdf_bar = groupsortdf.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
+df = pd.read_csv('csv_files/S3_LKL_points.csv')
+
+df['Result']=df['Sum']/df['Games']
+sortdf=df.sort_values(by='Result', ascending=False).round(2)
+groupsortdf = sortdf.groupby(["Team"]).sum()
+
+groupsortdf_bar = groupsortdf.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
+gruopsortdf_bar1 = groupsortdf_bar.groupby(['Team','Season']) ['Result'].sum()
 # sorted_by_asc = groupsortdf_bar.sort_values('Result')
-# # print(groupsortdf_bar)
-# # print(sorted_by_asc)
-#
-#
+# print(groupsortdf_bar)
+print(gruopsortdf_bar1)
+# print(sorted_by_asc)
+
+
 # plt.figure(figsize=(12,8))
-plt.plot
+# plt.plot
 # plt.xlabel(df['Season'])
 # plt.ylabel('Amziauskai')
 # plt.title('Mano pavyko Amzius pagal vardus')

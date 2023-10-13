@@ -33,3 +33,6 @@ pokytis per tris sezonus (reikia padaryti)
     ⁙ vizualizuoti duomenis pagal atliktą analizę
     ⁙ naudojant biblioteką leidžiančia prognozuoti rezultatus, pabandyti numatyti šio sezono LKL laimėtojus  
 
+PAVYZDYS
+
+![Highest results players.png](images%2FHighest%20results%20players.png)
