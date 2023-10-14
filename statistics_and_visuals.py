@@ -137,22 +137,22 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 # pasirinktos komandos pokytis per tris sezonus
 
-# df = pd.read_csv('csv_files/S3_LKL_points.csv')
-#
-# df['Result']=df['Sum']/df['Games']
-# # print(df)
-# dfresult = df.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
-# # print(dfresult)
-# team=dfresult[dfresult['Team']=='Žalgiris']
-# # print(team)
-# grouping = team.groupby(["Season","Team"]).sum('Result')
-# print(grouping)
-#
-# sns.set_theme(style='whitegrid')
-# plt.figure(figsize=(8, 6))
-# sns.barplot(data=grouping, x="Season", y="Result", hue = 'Team', palette = 'dark', alpha =.4)
-# plt.title('MLKL teams efficiency per game in 2022-2023 season')
-# plt.xticks(rotation = 8, size = 7)
-# plt.xlabel('Season')
-# plt.ylabel('Result per game')
-# plt.show()
+df = pd.read_csv('csv_files/S3_LKL_points.csv')
+
+df['Result']=df['Sum']/df['Games']
+# print(df)
+dfresult = df.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
+# print(dfresult)
+team=dfresult[dfresult['Team']=='Žalgiris']
+# print(team)
+grouping = team.groupby(["Season","Team"]).sum('Result')
+print(grouping)
+
+sns.set_theme(style='whitegrid')
+plt.figure(figsize=(8, 6))
+sns.barplot(data=grouping, x="Season", y="Result", hue = 'Team', palette = 'dark', alpha =.4)
+plt.title('MLKL teams efficiency per game in 2022-2023 season')
+plt.xticks(rotation = 8, size = 7)
+plt.xlabel('Season')
+plt.ylabel('Result per game')
+plt.show()
