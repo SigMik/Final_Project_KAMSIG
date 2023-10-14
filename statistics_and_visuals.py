@@ -105,7 +105,8 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # plt.xticks(fontsize = 0)
 # plt.xlabel('Teams')
 # plt.ylabel('Result per game')
-# plt.show()
+# plt.savefig('LKL teams efficiency per game.png')
+# # plt.show()
 
 # ******
 
@@ -134,37 +135,24 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 # ******
 
-# pasirinktos komandos pokytis per tris sezonus NEPAVYKSTA, BANDYTI TOLIAU
+# pasirinktos komandos pokytis per tris sezonus
 
-df = pd.read_csv('csv_files/S3_LKL_points.csv')
-
-df['Result']=df['Sum']/df['Games']
-sortdf=df.sort_values(by='Result', ascending=False).round(2)
-groupsortdf = sortdf.groupby(["Team"]).sum()
-
-groupsortdf_bar = groupsortdf.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
-gruopsortdf_bar1 = groupsortdf_bar.groupby(['Team','Season']) ['Result'].sum()
-# sorted_by_asc = groupsortdf_bar.sort_values('Result')
-# print(groupsortdf_bar)
-print(gruopsortdf_bar1)
-# print(sorted_by_asc)
-
-
-# plt.figure(figsize=(12,8))
-# plt.plot
-# plt.xlabel(df['Season'])
-# plt.ylabel('Amziauskai')
-# plt.title('Mano pavyko Amzius pagal vardus')
-# plt.show()
-
-# ******
-
-# tritaškių pataikymo procentas LKL ir MLKL
-
-# df = pd.read_csv('csv_files/LKL_3_points_percentage.csv')
-# # print(df)
-# wdf = pd.read_csv('csv_files/MLKL_3_points_percentage.csv')
-# # print(wdf)
+# df = pd.read_csv('csv_files/S3_LKL_points.csv')
 #
-# avg_3_percentage =df['Three_pts_percentage'].replace('%','').replace('.','').mean()
-# print(avg_3_percentage)
+# df['Result']=df['Sum']/df['Games']
+# # print(df)
+# dfresult = df.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
+# # print(dfresult)
+# team=dfresult[dfresult['Team']=='Žalgiris']
+# # print(team)
+# grouping = team.groupby(["Season","Team"]).sum('Result')
+# print(grouping)
+#
+# sns.set_theme(style='whitegrid')
+# plt.figure(figsize=(8, 6))
+# sns.barplot(data=grouping, x="Season", y="Result", hue = 'Team', palette = 'dark', alpha =.4)
+# plt.title('MLKL teams efficiency per game in 2022-2023 season')
+# plt.xticks(rotation = 8, size = 7)
+# plt.xlabel('Season')
+# plt.ylabel('Result per game')
+# plt.show()

@@ -3,10 +3,11 @@ import requests
 import pandas as pd
 
 # mdata=[]
-# #issirenkam pagal pelnomus taskus ir 2022-2023 sezona
-# url = 'https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html?fgroup=players&fseason=2022&fmonth=0&stage=0&fpos=pts&sort=total&games_type=all'
+# # #issirenkam pagal pelnomus taskus ir 2022-2023 sezona
+# url = ('https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html?fgroup=players&fseason=2022&fmonth=0&'
+#        'stage=0&fpos=pts&sort=total&games_type=all')
 # response = requests.get(url)
-# # print(response.status_code)
+# # # print(response.status_code)
 #
 # soup = BeautifulSoup(response.text, 'html.parser')
 # # print(soup.prettify())
@@ -51,7 +52,7 @@ import pandas as pd
 #
 # df=pd.DataFrame(mdata)
 # print(df)
-#
+
 # df.to_csv('MLKL_points.csv')
 
 #******
