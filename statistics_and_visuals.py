@@ -8,7 +8,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 # ******
 
-# didziausią taškų vidurkį per sezono rungtynes pelnęs žaidėjas LKL ir MLKL
+# CALCULIATION FOR INDEXES AND VIZUALIZATION FOR HIGHEST RESULT PLAYERS"
 #
 # df = pd.read_csv('csv_files/LKL_points.csv')
 # wdf = pd.read_csv('csv_files/MLKL_points.csv')
@@ -24,7 +24,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # # Sukuriame stulpelinę diagramą
 # plt.figure(figsize=(6, 6))
 # sns.barplot(data=sortdf[:1], x="Player", y="Result", hue='Result', palette='dark:white', width=0.2)
-# sns.barplot(data=sortwdf[:1], x="Player", y="Result", hue='Result', palette='dark:white', width=0.2)
+# sns.barplot(data=sortwdf[:1], x="Player", y="Result", hue='Result', palette='dark:red', width=0.2)
 # plt.title("Highest results of points per games in 2022-2023 season")
 # plt.text(0.15, 17, 'Ahmad Caver')
 # plt.text(0.4, 10, 'Tyra Marie Buss')
@@ -45,12 +45,12 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 #     ax.add_artist(ab)
 # plt.xlabel('Player')
 # plt.ylabel("Result by PTS average")
-# plt.savefig('Highest results players.png')
+# ##plt.savefig('Highest results players.png')
 # plt.show()
 
 # ******
 
-# trys žaidėjai pagal didžiausius efektyvumo balus LKL ir MLKL 2022-2023 sezone
+### CALCULIATION FOR INDEXES AND VIZUALISATION FOR EFFICIENCY POINTS BY PLAYERS
 
 # df = pd.read_csv('csv_files/LKL_efficiency.csv')
 # wdf = pd.read_csv('csv_files/MLKL_efficiency.csv')
@@ -64,12 +64,13 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # # print(sortwdf)
 #
 # sns.set_theme(style='whitegrid')
-# plt.figure(figsize=(12, 8))
-# sns.barplot(data=sortdf[:3], x="Player", y="Resultefficiency", hue = 'Team', palette = 'dark', alpha =.4)
-# sns.barplot(data=sortwdf[:3], x="Player", y="Resultefficiency", hue = 'Team', palette = "dark", alpha =.4)
+# plt.figure(figsize=(10, 8))
+# sns.barplot(data=sortdf[:3], x="Player", y="Resultefficiency", hue = 'Team', palette = 'Greens_d', alpha =.4)
+# sns.barplot(data=sortwdf[:3], x="Player", y="Resultefficiency", hue = 'Team', palette = "Greens_d", alpha =.4)
 # plt.title("Best three LKL and MLKL players by efficiency points 2022-2023 season")
 # plt.xlabel("LKL and MLKL player ")
 # plt.ylabel("Efficiency points by players")
+# ###plt.savefig('EFF points by players in LKL and MLKL')
 # plt.show()
 
 # ******
@@ -105,7 +106,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # plt.xticks(fontsize = 0)
 # plt.xlabel('Teams')
 # plt.ylabel('Result per game')
-# plt.savefig('LKL teams efficiency per game.png')
+### plt.savefig('LKL teams EFF 2022-2023.png')
 # # plt.show()
 
 # ******
@@ -123,36 +124,51 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # # print(groupsortdf_barplot)
 # print(wsorted_by_asc)
 #
-# sns.set_theme(style='whitegrid')
-# plt.figure(figsize=(8, 6))
-# sns.barplot(data=wsorted_by_asc, x="Team", y="Result", hue = 'Team', palette = 'dark', alpha =.4)
-# plt.title('MLKL teams efficiency per game in 2022-2023 season')
-# plt.xticks(rotation = 8, size = 7)
+# plt.figure(figsize=(8, 8))
+# sns.set_style("darkgrid", {"grid.color": ".10", "grid.linestyle": ":"})
+# plots = sns.barplot(x="Team", y="Result", data=wsorted_by_asc, color ='grey')
+# for bar in plots.patches:
+#     plots.annotate(format(bar.get_height(), '.2f'),
+#                    (bar.get_x() + bar.get_width() / 2,
+#                     bar.get_height()), ha='right', va='center',
+#                    size=14, xytext=(0, 8),
+#                    textcoords='offset points')
+# plt.xlabel("Team", size=14)
+#
+# plt.ylabel("Result", size=14)
+# plt.title("MLKL teams efficiency per game in 2022-2023 season", fontsize=15)
+# plt.text(0.2, 10, 'Šiaulių Šiauliai-Vilmers', rotation=90, fontsize = 12)
+# plt.text(1.2, 4, 'Klaipėdos LCC tarptautinis universitetas', rotation=90, fontsize = 12)
+# plt.text(2.2, 38, 'Kauno Aistės-LSMU ', rotation=90, fontsize = 12)
+# plt.text(3.2, 43, 'Klaipėdos Neptūnas ', rotation=90, fontsize = 12)
+# plt.text(4.2, 100, 'Vilniaus Kibirkštis ', rotation=90, fontsize = 12)
+# plt.xticks(fontsize = 0)
 # plt.xlabel('Teams')
-# plt.ylabel('Result per game')
-# plt.savefig('MLKL teams EFF 2022-2023.png')
+# plt.ylabel('Efficiency points per game')
+# ##plt.savefig('MLKL teams EFF 2022-2023.png')
 # plt.show()
 
 # ******
 
-# pasirinktos komandos pokytis per tris sezonus
+# LKL komandų rezultatai pagal komandos rungtynių taškų vidurkį per trejus sezonus
 
-df = pd.read_csv('csv_files/S3_LKL_points.csv')
-
-df['Result']=df['Sum']/df['Games']
-# print(df)
-dfresult = df.drop(columns = ['Place','Games','Sum','Unnamed: 0','Player'])
-# print(dfresult)
-team=dfresult[dfresult['Team']=='Žalgiris']
-# print(team)
-grouping = team.groupby(["Season","Team"]).sum('Result')
-print(grouping)
-
-sns.set_theme(style='whitegrid')
-plt.figure(figsize=(8, 6))
-sns.barplot(data=grouping, x="Season", y="Result", hue = 'Team', palette = 'dark', alpha =.4)
-plt.title('MLKL teams efficiency per game in 2022-2023 season')
-plt.xticks(rotation = 8, size = 7)
-plt.xlabel('Season')
-plt.ylabel('Result per game')
-plt.show()
+# df = pd.read_csv('csv_files/BS3_LKL_points.csv')
+#
+# dfbasic = df.drop(columns = ['Unnamed: 0'])
+# dfbasicsor = dfbasic.sort_values('Season')
+# # print(dfbasic)
+# print(dfbasicsor)
+#
+# sns.set_style("whitegrid", {
+#   "ytick.major.size": 0.1,
+#     "ytick.minor.size": 0.05,
+#    'grid.linestyle': 'dashed',
+#  })
+# g = sns.lineplot(data=dfbasicsor, x="Season", y="Avg", hue='Team')
+# lines = g.get_lines()
+# g.legend(fontsize="5", loc ="lower left")
+# plt.title('LKL teams variation during 3 seasons')
+# plt.xlabel('Seasons')
+# plt.ylabel('Point average during game')
+# ##plt.savefig('LKL teams variation 3 seasons.png')
+# plt.show()
