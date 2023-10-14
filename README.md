@@ -1,61 +1,90 @@
-### Lithuanian basketball LKL and MLKL leagues statistic analysis 
+### Lithuanian basketball LKL and MLKL leagues statistic data analysis 
 
-Projektą kūrė: Kamila Kononovič ir Sigita Mikolainienė
-Projekto tema: Krepšinio statistinė analizė Lietuvos vyrų ir moterų krepšinio lygoje
+Project created by: Kamila Kononovič and Sigita Mikolainienė
+Project theme: Lithuanian basketball men (LKL) and women (MLKL) leagues statistic data analysis 
 
-Mokykla: Vilnius Coding school
-Lektorius: Modestas Viršila
+Education institution: Vilnius Coding School
+Lecturer: Modestas Viršila
 
-
-Projekto tikslas: surinkti, apdoroti, išanalizuoti ir vizualizuoti krepšinio paskutinio sezono 2022 -2023 LKL ir MLKL
-statistiką naudojant Python ir susijusias bibliotekas. Išanalizuoti papildomų dviejų sezonų 2021-2022, 2020-2021 LKL ir
-MLK  statistiką ir vizualizuoti pagal pasirinktus kriterijus.
-
-Projekte buvo naudojama Python kalba, python bibliotekos, csv failai, vizualai.
+The main goal of the project is to collect, process, analyze and visualize the latest basketball season 2022-2023 LKL 
+and MLKL statistics using Python language and its related libraries.
 
 ### Web scraping
 
+This is the summary of steps which were made for the web scraping. The workings for web scraping was performed in the
+following files:
 [web_scrap_LKL.py](web_scrap_LKL.py)
 [web_scrap_MLKL.py](web_scrap_MLKL.py)
 
-Used imports:....
+Used imports: BeautifulSoup, requests, pandas
 
 Steps:
-1. Finding necesary LKL and MLKL data from url [(https://lkl.lt/statistika)] and [(....)]
-2. Getting needed data from url as table using Beautiful soup and  indicate analysis method (html.parser)
-3. Using for loop received data and saved to csv files
+1. Finding reliable source of Lithuanian basketball statistics for the web scraping. Men and women basketball leagues 
+   data were taken from the following URLs with the official basketball data:
+   [(https://lkl.lt/statistika)]
+   [(https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html)]
+2. Determining which basketball statistics categories will be analyzed. For our analysis, we have chosen points (PTS),
+   rebounds (REB), assists (AS) and efficiency (EFF) of the basketball players
+3. Getting needed data from URLs as table using BeautifulSoup and indicating analysis method (html.parser)
+4. Creating 'for' loop in order to scrape the data over each URL page. As a result, the whole data was extracted for 
+   the season of 2022-2023
+5. Using DataFrame function to store the collected information and exporting the DataFrame into a csv files
 
 ### Statistics and visuals
 
+This is the summary of target and steps which were done to perform statistic and visual analysis of basketball teams.
 [statistics_and_visuals.py](statistics_and_visuals.py)
 
-Used imports:...
-Steps:
-1.  ...
-2.  ...
+Used imports: BeautifulSoup, requests, pandas, numpy, seaborn, matplotlib.pyplot, OffsetImage, AnnotationBbox
 
-### Conclusions....
+Targets:
+1. To identify the players with the highest points scoring average per season in LKL and MLKL and to add image of each 
+   player into the graph. In order to perform the analysis, the following steps were taken:
+   ⁘ Reading the csv files created earlier with poins of basketball teams
+   ⁘ Calculating the points average result per game in LKL and MLKL
+   ⁘ Sorting the values by result in the ascending order
+   ⁘ Creating the barplot using seaborn and matplotlib packages and adding the images of each player
 
-
-
-Su BeautifulSoup buvo paimti duomenys iš svetainės  
-
-
-Projekto užduotys (pildysis projekto eigoje):
-    ⁙ surinkti duomenis iš pasirinktų dviejų url
-    ⁙ sudėti juos į lentelė ir apdoroti reikšmes, kurias naudosime analizei
-    ⁙ atlikti LKL ir MLKL  statistinę analizę:
-        ⁘ geriausią taškų vidurkį per rungtynes turintis žaidėjas LKL ir MLKL
-        ⁘ penki žaidėjai pagal didžiausius efektyvumo balus LKL ir MLKL 
-        ⁘ komandų pasiskirstymas pagal efektyvumo balą LKL ir MLKL     
-        ⁘ taškų santykis su klaidomis LKL 5 žaidėjų ir MLKL 5 žaidėjų (nezinau)
-        ⁘ tritaškių pataikymo procentas LKL ir MLKL (reikia padaryti)
-        ⁘ geriausią taškų vidurkį pagal komandas ir sezonus  arba komandos 
-pokytis per tris sezonus (reikia padaryti)
-
-    ⁙ vizualizuoti duomenis pagal atliktą analizę
-    ⁙ naudojant biblioteką leidžiančia prognozuoti rezultatus, pabandyti numatyti šio sezono LKL laimėtojus  
-
-PAVYZDYS
-
+After the performed analysis, we have obtained the graph with below results:
 ![Highest results players.png](images%2FHighest%20results%20players.png)
+
+2. To identify three players according to the highest efficiency scores in the LKL and MLKL. In order to conduct the 
+analysis, the following steps were taken:
+   ⁘ Reading the csv files created earlier with efficiency results of basketball teams
+   ⁘ Calculating the efficiency average result per game in LKL and MLKL
+   ⁘ Creating new DataFrame where the values are sorted by efficiency score in the ascending order
+   ⁘ Creating the barplots using seaborn and matplotlib packages
+
+After the performed analysis, we have obtained the graph with below results:
+![LKL teams efficiency per game.png](images%2FLKL%20teams%20efficiency%20per%20game.png)
+
+![MLKL teams EFF 2022-2023.png](images%2FMLKL%20teams%20EFF%202022-2023.png)
+
+3. To analyse performance of basketball teams according to the efficiency score in LKL and MLKL. In order to conduct the
+analysis, the following steps were taken:
+   ⁘ Reading the csv files created earlier with efficiency results of basketball teams
+   ⁘ Calculating the efficiency average result per game in LKL and MLKL
+   ⁘ Creating new DataFrame where the values are sorted by efficiency score in the ascending order
+   ⁘ Eliminating the irrelevant columns 
+   ⁘ Creating the barplots using seaborn and matplotlib packages and adding all basketball teams played in the season.
+
+After the performed analysis, we have obtained the graph with below results:
+[grafikas]
+
+
+
+### Conclusions
+
+After the performed analysis of Lithuanian LKL and MLKL basketball leagues, it is now possible to define the best
+players and their teams in LKL and MLKL in the season 2022-2023 according to the criterias described above. Therefore, 
+we have achieved the following findings:
+   ⁘ The best players in season 2022-2023 in LKL according to the calculated average points per games was Ahmad Caver 
+     from basketball team 'Wolves' with average result per game 17.09, while the best player from MLKL was Tyra Marie 
+     Buss with average result per game 10.57
+   ⁘ The top teams from the total 12 teams played in season 2022-2023 in LKL according to the calculated average 
+     efficiency ratio per game was 'Rytas' with efficiency of 157, the second and third place was taken by the teams 
+     'Žalgiris' and 'Uniclub Casino - Juventus' with same efficiency of 155. However, the smallest efficiency of 87 was 
+     earned by the team 'Gargždai'. Referring to MLKL, the total number of teams which played in 2022-2023 were 5 teams. 
+     The best performance by efficiency ratio was earned by the team 'Vilniaus Kibirkštis' with efficiency of 133, while
+     the second and third place was taken by the 'Klaipėdos Neptūnas' and 'Kauno Aistės LSMU' teams with similar results
+     of 81 and 77 accordingly. The lowest result was made by 'Šiaulių Šiauliai-Vilmers' team with efficiency of 52.
