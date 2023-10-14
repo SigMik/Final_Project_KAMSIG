@@ -2,16 +2,21 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
+### MLKL WEB SCRAPING BY POINTS
+### creating emppty list for data storing
 # mdata=[]
-# # #issirenkam pagal pelnomus taskus ir 2022-2023 sezona
+### scraping MLKL data by points category from chosen website
 # url = ('https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html?fgroup=players&fseason=2022&fmonth=0&'
 #        'stage=0&fpos=pts&sort=total&games_type=all')
+### checking the URL response
 # response = requests.get(url)
 # # # print(response.status_code)
-#
+
+### getting needed data from URLs as table indicating analysis method
 # soup = BeautifulSoup(response.text, 'html.parser')
 # # print(soup.prettify())
-#
+
+### extracting the data from the required table columns
 # table=soup.find('table',class_='list02')
 # if table:
 #     rows = table.find_all('tr')
@@ -49,24 +54,27 @@ import pandas as pd
 #             'Games': games,
 #             'Sum': sum
 #         })
-#
+
+### creating DataFrame to store the collected data
 # df=pd.DataFrame(mdata)
 # print(df)
 
+### exporting MLKL points data to csv file
 # df.to_csv('MLKL_points.csv')
 
-#******
-
+### MLKL WEB SCRAPING BY EFFICIENCY RATIO
+### creating emppty list for data storing
 # mdata3=[]
-# #issirenkam pagal naudinguma rezultatyvius perdavimus ir 2022-2023 sezona
-#
-# url = 'https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html?fgroup=players&fseason=2022&fmonth=0&stage=0&fpos=eff&sort=total&games_type=all'
+### scraping MLKL data by efficiency ratio category from chosen website
+# url = ('https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html?fgroup=players&fseason=2022&fmonth=0&'
+#        'stage=0&fpos=eff&sort=total&games_type=all')
 # response = requests.get(url)
+### checking the URL response
 # # print(response.status_code)
-#
+### getting needed data from URLs as table indicating analysis method
 # soup = BeautifulSoup(response.text, 'html.parser')
 # # print(soup.prettify())
-#
+### extracting the data from the required table columns
 # table=soup.find('table',class_='list02')
 #
 # if table:
@@ -105,10 +113,12 @@ import pandas as pd
 #             'Games': games,
 #             'Sum': sum
 #         })
-#
+
+### creating DataFrame to store the collected data
 # df=pd.DataFrame(mdata3)
 # print(df)
-#
+
+### exporting MLKL efficiency data to csv file
 # df.to_csv('MLKL_efficiency.csv')
 
 

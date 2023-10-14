@@ -6,12 +6,12 @@ Project theme: Lithuanian basketball men (LKL) and women (MLKL) leagues statisti
 Education institution: Vilnius Coding School
 Lecturer: Modestas Viršila
 
-The main goal of the project is to collect, process, analyze and visualize the latest basketball season 2022-2023 LKL 
-and MLKL statistics using Python language and its related libraries.
+The main goal of the project is to collect, process, analyze and visualize the LKL and MLKL statistics using Python 
+language and its related libraries.
 
 ### Web scraping
 
-This is the summary of steps which were made for the web scraping. The workings for web scraping was performed in the
+This is the summary of steps which were made for the web scraping. The workings for web scraping were performed in the
 following files:
 [web_scrap_LKL.py](web_scrap_LKL.py)
 [web_scrap_MLKL.py](web_scrap_MLKL.py)
@@ -20,19 +20,20 @@ Used imports: BeautifulSoup, requests, pandas
 
 Steps:
 1. Finding reliable source of Lithuanian basketball statistics for the web scraping. Men and women basketball leagues 
-   data were taken from the following URLs with the official basketball data:
+   data were taken from the following URLs where the official basketball is available:
    [(https://lkl.lt/statistika)]
    [(https://moterulyga.lt/lygos/164-moteru-lkl-a-divizionas/statistika.html)]
-2. Determining which basketball statistics categories will be analyzed. For our analysis, we have chosen points (PTS),
-   rebounds (REB), assists (AS) and efficiency (EFF) of the basketball players
+2. Determining which basketball statistics categories will be analyzed. For our analysis, we have chosen points (PTS), 
+   efficiency (EFF) of the basketball players
 3. Getting needed data from URLs as table using BeautifulSoup and indicating analysis method (html.parser)
-4. Creating 'for' loop in order to scrape the data over each URL page. As a result, the whole data was extracted for 
-   the season of 2022-2023
+4. Creating 'for' loop in order to scrape the data over each URL page. As a result, the full data available at the
+   website was extracted
 5. Using DataFrame function to store the collected information and exporting the DataFrame into a csv files
 
 ### Statistics and visuals
 
-This is the summary of target and steps which were done to perform statistic and visual analysis of basketball teams.
+This is the summary of targets and steps which were done to perform statistic and visual analysis of basketball teams.
+The workings of statistic and visuals analysis were perfomed in the file:
 [statistics_and_visuals.py](statistics_and_visuals.py)
 
 Used imports: BeautifulSoup, requests, pandas, numpy, seaborn, matplotlib.pyplot, OffsetImage, AnnotationBbox
@@ -40,10 +41,10 @@ Used imports: BeautifulSoup, requests, pandas, numpy, seaborn, matplotlib.pyplot
 Targets:
 1. To identify the players with the highest points scoring average per season in LKL and MLKL and to add image of each 
    player into the graph. In order to perform the analysis, the following steps were taken:
-   ⁘ Reading the csv files created earlier with poins of basketball teams
+   ⁘ Reading the csv files created earlier with points of basketball teams
    ⁘ Calculating the points average result per game in LKL and MLKL
-   ⁘ Sorting the values by result in the ascending order
-   ⁘ Creating the barplot using seaborn and matplotlib packages and adding the images of each player
+   ⁘ Sorting the values by result in the descending order
+   ⁘ Creating graph using seaborn and matplotlib packages and adding the images of each player
 
 After the performed analysis, we have obtained the graph with below results:
 ![Highest results players.png](images%2FHighest%20results%20players.png)
@@ -52,10 +53,10 @@ After the performed analysis, we have obtained the graph with below results:
 analysis, the following steps were taken:
    ⁘ Reading the csv files created earlier with efficiency results of basketball teams
    ⁘ Calculating the efficiency average result per game in LKL and MLKL
-   ⁘ Creating new DataFrame where the values are sorted by efficiency score in the ascending order
-   ⁘ Creating the barplots using seaborn and matplotlib packages
+   ⁘ Creating new DataFrame where the values are sorted by efficiency score in the descending order
+   ⁘ Creating graphs using seaborn and matplotlib packages
 
-After the performed analysis, we have obtained the graph with below results:
+After the performed analysis, we have obtained the graphs with below results:
 ![LKL teams efficiency per game.png](images%2FLKL%20teams%20efficiency%20per%20game.png)
 
 ![MLKL teams EFF 2022-2023.png](images%2FMLKL%20teams%20EFF%202022-2023.png)
