@@ -1,6 +1,9 @@
-#naudotos bibliotekos
-
-# from bs4 import BeautifulSoup
-# import requests
-# import pandas as pd
-# import psycopg2
+### Used libraries in Lithuanian LKL and MLKL leagues statistics data analysis
+from bs4 import BeautifulSoup
+import seaborn as sns
+import requests
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox

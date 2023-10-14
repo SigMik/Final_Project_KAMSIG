@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
-### MLKL WEB SCRAPING BY POINTS
+### MLKL WEB SCRAPING BY POINTS AND 2022-2023 SEASON
 ### creating emppty list for data storing
 # mdata=[]
 ### scraping MLKL data by points category from chosen website
@@ -62,7 +62,7 @@ import pandas as pd
 ### exporting MLKL points data to csv file
 # df.to_csv('MLKL_points.csv')
 
-### MLKL WEB SCRAPING BY EFFICIENCY RATIO
+### MLKL WEB SCRAPING BY EFFICIENCY RATIO AND 2022-2023 SEASON
 ### creating emppty list for data storing
 # mdata3=[]
 ### scraping MLKL data by efficiency ratio category from chosen website

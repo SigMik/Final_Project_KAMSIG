@@ -7,18 +7,21 @@ import matplotlib.pyplot as plt
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 ### 1. CALCULATION AND VISUALIZATION OF PLAYERS WITH HIGHEST AVERAGE POINTS IN LKL AND MLKL DURING 2022-2023 SEASON
+
 ### reading the csv files created earlier of LKL and MLKL points
 # df = pd.read_csv('csv_files/LKL_points.csv')
 # wdf = pd.read_csv('csv_files/MLKL_points.csv')
 
 ### calculating the LKL average points results using division function
 # df['Result']=df['Sum']/df['Games']
+
 ### creating new DataFrame and sorting received values by result in descending order
 # sortdf=df.sort_values(by='Result', ascending=False).round(2)
 # print(sortdf)
 
 ### calculating the MLKL average points results using division function
 # wdf['Result']=wdf['Sum']/df['Games']
+
 ### creating new DataFrame and sorting received values by result in descending order
 # sortwdf=wdf.sort_values(by='Result', ascending=False).round(2)
 # print(sortwdf)
@@ -26,6 +29,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 ### creating barplot to represent the results in the graph
 ### indicating the required parameters of the bar
 # plt.figure(figsize=(6, 6))
+
 ### creating bars with data from LKL and MLKL results
 # sns.barplot(data=sortdf[:1], x="Player", y="Result", hue='Result', palette='dark:white', width=0.2)
 # sns.barplot(data=sortwdf[:1], x="Player", y="Result", hue='Result', palette='dark:red', width=0.2)
@@ -36,7 +40,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 ### adding the images of players to the graph
 # img=[plt.imread('C:\FotoLKL\ImageLKL1.png'), plt.imread('C:\FotoLKL\ImageMLKL2.png')]
-#
+
 # ax=plt.gca()
 # tick_labels = ax.xaxis.get_ticklabels()
 # for i,im in enumerate(img):
@@ -50,23 +54,26 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 #     ax.add_artist(ab)
 # plt.xlabel('Player')
 # plt.ylabel("Result by PTS average")
-# ##plt.savefig('Highest results players.png')
+###plt.savefig('Highest results players.png')
 # plt.show()
 
 
-### 2. CALCULATION AND VISUALIZATION OF PLAYERS WITH HIGHEST EFFICIENCY RATIO IN LKL AND MLKL DURING 2022-2023 SEASON
+### 2. CALCULATION AND VISUALIZATION OF THREE PLAYERS WITH HIGHEST EFFICIENCY RATIO IN LKL AND MLKL DURING 2022-2023 SEASON
+
 ### reading the csv files created earlier of LKL and MLKL efficiency
 # df = pd.read_csv('csv_files/LKL_efficiency.csv')
 # wdf = pd.read_csv('csv_files/MLKL_efficiency.csv')
 
 ### calculating the LKL average efficiency results using division function
 # df['Resultefficiency']=df['Sum']/df['Games']
+
 ### creating new DataFrame and sorting received values by efficiency result in descending order
 # sortdf=df.sort_values(by='Resultefficiency', ascending=False).round(2)
 # print(sortdf)
 
 ### calculating the MLKL average efficiency results using division function
 # wdf['Resultefficiency']=wdf['Sum']/wdf['Games']
+
 ### creating new DataFrame and sorting received values by efficiency result in descending order
 # sortwdf=wdf.sort_values(by='Resultefficiency', ascending=False).round(2)
 # # print(sortwdf)
@@ -80,10 +87,11 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # plt.title("Best three LKL and MLKL players by efficiency points 2022-2023 season")
 # plt.xlabel("LKL and MLKL player ")
 # plt.ylabel("Efficiency points by players")
-# ###plt.savefig('EFF points by players in LKL and MLKL')
+### plt.savefig('EFF points by players in LKL and MLKL')
 # plt.show()
 
-### 3. CALCULATION AND VISUALISATION OF TEAMS PERFORMANCE ACCORDING TO THE EFFICIENCY SCORE IN LKL AND MLKL
+### 3. CALCULATION AND VISUALISATION OF TEAMS EFFICIENCY PER GAME IN LKL AND MLKL DURING 2022-2023 SEASON
+
 ### LKL calculation and analysis
 ### reading the csv files created earlier of LKL efficiency
 # df = pd.read_csv('csv_files/LKL_efficiency.csv')
@@ -104,7 +112,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # sorted_by_asc = groupsortdf_barplot.sort_values('Result')
 # # print(groupsortdf_barplot)
 # print(sorted_by_asc)
-#
+
 ### creating the barplot to visualise the results based on each team efficiency
 # sns.set_style("darkgrid", {"grid.color": ".10", "grid.linestyle": ":"})
 # sns.barplot(data = sorted_by_asc, x= 'Team', y = 'Result')
@@ -176,17 +184,21 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 # ##plt.savefig('MLKL teams EFF 2022-2023.png')
 # plt.show()
 
-# ******
+### 3. CALCULATION AND VISUALISATION OF BASKETBALL TEAMS PERFORMANCE ACCORDING TO THE AVERAGE POINTS IN LKL DURING
+### THREE LAST SEASONS:2020-2021, 2021-2022 and 2022-2023.
 
-# LKL komandų rezultatai pagal komandos rungtynių taškų vidurkį per trejus sezonus
-
+### reading the csv files created earlier of MLKL efficiency
 # df = pd.read_csv('csv_files/BS3_LKL_points.csv')
-#
+
+### eliminating irrevelant columns
 # dfbasic = df.drop(columns = ['Unnamed: 0'])
+
+### sorting values by season
 # dfbasicsor = dfbasic.sort_values('Season')
 # # print(dfbasic)
 # print(dfbasicsor)
-#
+
+### creating the barplot to visualise the results
 # sns.set_style("whitegrid", {
 #   "ytick.major.size": 0.1,
 #     "ytick.minor.size": 0.05,
