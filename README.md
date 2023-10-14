@@ -41,7 +41,7 @@ Used imports: BeautifulSoup, requests, pandas, numpy, seaborn, matplotlib.pyplot
 Targets:
 1. To identify the players with the highest points scoring average per season in LKL and MLKL and to add image of each 
    player into the graph. In order to perform the analysis, the following steps were taken:
-   * Reading the csv files created earlier with points of basketball teams 
+   ⁘ Reading the csv files created earlier with points of basketball teams 
    ⁘ Calculating the points average result per game in LKL and MLKL
    ⁘ Sorting the values by result in the descending order
    ⁘ Creating graph using seaborn and matplotlib packages and adding the images of each player
