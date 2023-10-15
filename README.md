@@ -94,7 +94,7 @@ players and their teams in LKL and MLKL according to the criterias chosen (point
 achieved the following findings:
    * The best players in season 2022-2023 in LKL according to the calculated average points per games was Ahmad Caver 
      from basketball team 'Wolves' with average result per game 17.09, while the best player from MLKL was Tyra Marie 
-     Buss from team 'Kauno Aistės-LSMU' with average result per game 10.57
+     Buss from team 'Kauno Aistės-LSMU' with average result per game 10.57.
    * The best three players in season 2022-2023 in LKL according to the calculated average efficiency was Ahmad Caver
      with efficiency of 21, when the second and third places were taken by Jeffery Garrett and Martynas Echodas with
      similar efficiency results of 18. Meanwhile, the best three players from MLKL was Gintarė Petronytė with efficiency

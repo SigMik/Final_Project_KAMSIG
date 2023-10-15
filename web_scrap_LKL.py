@@ -13,7 +13,7 @@ import pandas as pd
 # ##checking the URL response
 #     response = requests.get(url)
 #     # print(response.status_code)
-# ## getting needed data from URL as table indicating analysis method
+# ## getting needed data from URL as table and indicating analysis method
 #     soup = BeautifulSoup(response.text, 'html.parser')
 #     # print(soup.prettify())
 #

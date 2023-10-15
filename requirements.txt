@@ -1,4 +1,4 @@
-### Below are used libraries in Lithuanian LKL and MLKL leagues statistics data analysis
+### Below are used libraries in Lithuanian LKL and MLKL leagues statistic data analysis
 from bs4 import BeautifulSoup
 import seaborn as sns
 import requests

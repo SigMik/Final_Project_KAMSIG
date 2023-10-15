@@ -12,7 +12,7 @@ import pandas as pd
 # response = requests.get(url)
 # # # print(response.status_code)
 
-### getting needed data from URLs as table indicating analysis method
+### getting needed data from URLs as table and indicating analysis method
 # soup = BeautifulSoup(response.text, 'html.parser')
 # # print(soup.prettify())
 
@@ -71,7 +71,7 @@ import pandas as pd
 # response = requests.get(url)
 ### checking the URL response
 # # print(response.status_code)
-### getting needed data from URLs as table indicating analysis method
+### getting needed data from URLs as table and indicating analysis method
 # soup = BeautifulSoup(response.text, 'html.parser')
 # # print(soup.prettify())
 ### extracting the data from the required table columns

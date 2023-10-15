@@ -57,7 +57,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 ### plt.savefig('Highest results players.png')
 # plt.show()
 
-### 2. CALCULATION AND VISUALIZATION OF THREE PLAYERS WITH HIGHEST EFFICIENCY RATIO IN LKL AND MLKL DURING 2022-2023
+### 2. CALCULATION AND VISUALIZATION OF THREE PLAYERS WITH HIGHEST EFFICIENCY IN LKL AND MLKL DURING 2022-2023
 
 ### reading the csv files created earlier of LKL and MLKL efficiency
 # df = pd.read_csv('csv_files/LKL_efficiency.csv')
