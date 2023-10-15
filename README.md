@@ -5,6 +5,7 @@ Project created by: Kamila Kononovič and Sigita Mikolainienė
 Project theme: Lithuanian basketball men (LKL) and women (MLKL) leagues statistics data analysis 
 
 Education institution: Vilnius Coding School
+
 Lecturer: Modestas Viršila
 
 The main goal of the project is to collect, process, analyze and visualize the LKL and MLKL statistics using Python 
