@@ -1,6 +1,7 @@
 ### Lithuanian basketball LKL and MLKL leagues statistic data analysis 
 
 Project created by: Kamila Kononovič and Sigita Mikolainienė
+
 Project theme: Lithuanian basketball men (LKL) and women (MLKL) leagues statistics data analysis 
 
 Education institution: Vilnius Coding School
