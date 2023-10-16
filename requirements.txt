@@ -1,8 +1,10 @@
-### Below are used libraries in Lithuanian LKL and MLKL leagues statistic data analysis
+Below are used libraries in Lithuanian LKL and MLKL leagues statistic data analysis
+
+pandas==2.1.1
+numpy
+matplotlib
+seaborn
 from bs4 import BeautifulSoup
-import seaborn as sns
-import requests
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+requests
+pip install -r rquirements.txt
+
