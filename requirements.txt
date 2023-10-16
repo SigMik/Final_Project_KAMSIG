@@ -1,10 +1,11 @@
 Below are used libraries in Lithuanian LKL and MLKL leagues statistic data analysis
 
 pandas==2.1.1
-numpy
-matplotlib
-seaborn
-from bs4 import BeautifulSoup
-requests
-pip install -r rquirements.txt
+numpy==1.25.2
+matplotlib==3.7.3
+seaborn==0.13.0
+BeautifulSoup==4.12.2
+requests==2.31.0
+
+###pip install -r requirements.txt
 
